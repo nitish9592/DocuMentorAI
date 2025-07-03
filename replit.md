@@ -91,6 +91,8 @@ DocuMentor is a full-stack document management application built with React, Exp
 ## Changelog
 
 - July 03, 2025. Initial setup
+- July 03, 2025. Enhanced with responsive design and AI-powered summarization
+- July 03, 2025. Converted to single-page application per user request
 
 ## User Preferences
 

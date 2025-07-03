@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Layout from "@/components/Layout";
+import { FileText } from "lucide-react";
 import StatsCards from "@/components/StatsCards";
 import FileUploader from "@/components/FileUploader";
 import AIPanel from "@/components/AIPanel";
@@ -30,15 +30,20 @@ export default function Dashboard() {
   }) || [];
 
   return (
-    <Layout>
-      <div className="p-4 lg:p-8">
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto p-4 lg:p-8 max-w-7xl">
         {/* Header */}
-        <div className="mb-8">
-          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-            Document Management
+        <div className="mb-8 text-center">
+          <div className="flex items-center justify-center mb-4">
+            <FileText className="text-primary text-3xl mr-3" />
+            <h1 className="text-3xl lg:text-4xl font-bold text-foreground">DocuMentor</h1>
+          </div>
+          <h2 className="text-xl lg:text-2xl font-semibold text-foreground mb-2">
+            AI-Powered Document Management
           </h2>
-          <p className="text-muted-foreground">
-            Upload, analyze, and manage your PDF documents with AI-powered insights
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Upload, analyze, and manage your PDF documents with intelligent AI-powered insights, 
+            automatic categorization, and smart summarization
           </p>
         </div>
 
@@ -77,6 +82,6 @@ export default function Dashboard() {
           onClose={() => setSummaryDocument(null)}
         />
       </div>
-    </Layout>
+    </div>
   );
 }
